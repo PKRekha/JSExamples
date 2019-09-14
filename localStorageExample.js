@@ -25,3 +25,17 @@ a.map(function(a){
     else
     console.log('invalid');
 })
+
+/********************************************************************/
+
+/*using map and ES6 declaration of function type*/
+/*()=>{}*/
+
+var a = ["kanthi", "keerthi", "sruthi"];
+var eleCheck = prompt("Enter any name");
+a.map((a) => {
+    var result;
+  if (a == eleCheck) result = "valid";
+  else result = "invalid";
+  return result;
+});

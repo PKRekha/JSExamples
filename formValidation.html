@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>simpleForm validation </title>
+        <script>
+            function validate(){
+                var out=document.getElementById('fname').value;
+                console.log(out.length);
+                if(out==''|| out==" "){
+                    document.getElementById('message').innerText='please enter first name!!!!!!!!!!!!';
+                }
+                else{
+                    var v=out.charAt(0).toUpperCase()+out.slice(1).toLowerCase();
+                    document.getElementById('fname').value=v;
+                    document.getElementById('message').innerText='Entered Valid fname.';
+                }
+                
+                //using terinory operator, changing the color depending on the condition.
+                out.length>0 ? (document.getElementById('message').style.color='green'):(document.getElementById('message').style.color='red')
+
+          }
+        </script>
+    </head>
+    <body>
+        <form>
+            <label>First Name:</label>
+            <input type="text" id='fname' onblur="validate()"/>
+
+            <label>Last Name:</label>
+            <input type="text" id='lname'/>
+
+            <p id='message'></p>
+        </form>
+    </body>
+</html>

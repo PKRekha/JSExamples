@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>progress Bar Example</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <script>
+            var a=0;
+            var b=0;
+            function main(){
+                    var i=0;
+                    var out=setInterval(progress,1000);
+                    function progress(){
+                            if(b>80){
+                                clearInterval(out);
+                            }
+                            else{
+                                a=a+20;
+                                b=parseInt(i)+parseInt(a);
+                                console.log("a is"+ a);
+                                console.log('b is :'+b);
+                                if(b==0||b==undefined){
+                                    document.getElementsByClassName('progress-bar')[0].style.width="0%"
+                                    document.getElementById('data').innerText='0%'
+                                }
+                                else if(b==20){
+                                         document.getElementsByClassName('progress-bar')[0].style.width="20%"
+                                         document.getElementById('data').innerText='20%'
+                                }
+                                else if(b==40){
+                                         document.getElementsByClassName('progress-bar')[0].style.width="40%"
+                                         document.getElementById('data').innerText='40%'
+                                }
+
+                                else if(b==60){
+                                         document.getElementsByClassName('progress-bar')[0].style.width="60%"
+                                         document.getElementById('data').innerText='60%'
+                                }
+
+                                else if(b==80){
+                                         document.getElementsByClassName('progress-bar')[0].style.width="80%"
+                                         document.getElementById('data').innerText='80%'
+                                }
+                                else if(b==100){
+                                         document.getElementsByClassName('progress-bar')[0].style.width="100%";
+                                          document.getElementById('data').innerText='100%'
+                                         document.getElementById('mainp').innerText='page loaded sucessfully'
+                                }
+
+                            }
+                    }
+            }
+
+            window.onload=main();
+        </script>
+
+   
+    </head>
+    <body>
+        <div class='container'>
+                <div class='progress'>
+                        <div class='progress-bar progress-bar-striped bg-dark active' role="progressbar" style="width:0%">
+                                <span id='data'></span>
+                        </div>                        
+                </div>
+                <h1 id='mainp'></h1>
+        </div>
+    </body>
+</html>

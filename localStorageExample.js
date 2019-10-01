@@ -39,3 +39,48 @@ a.map((a) => {
   else result = "invalid";
   return result;
 });
+
+
+
+
+
+
+/*
+/*Same example, using map function*/
+
+var a = ["kanthi", "keerthi", "sruthi"];
+var eleCheck=prompt('Enter any name!!!')
+a.map(function(a){
+    if(a==eleCheck)
+    console.log('valid name');
+    else
+    console.log('invalid');
+})
+
+/*************************** */
+
+var a = ["kanthi", "keerthi", "sruthi"];
+var eleCheck=prompt('Enter any name');
+var function1=(a)=>{
+   a.map(a => {
+     var result;
+     if (a == eleCheck) result = "valid";
+     else result = "invalid";
+     return result;
+   });
+    return result;
+}
+
+function1('kanthi','keerthi','sruthi','jeethu','kunndu');
+
+/****************** */
+
+var a = ["kanthi", "keerthi", "sruthi"];
+var eleCheck = prompt("Enter any name");
+a.map((a) => {
+    var result;
+  if (a == eleCheck) result = "valid";
+  else result = "invalid";
+  return result;
+});
+*/

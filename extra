@@ -1,0 +1,66 @@
+extra information while working with arrays and objects....
+
+arrays and ojbects are the two important things for iteration for any 
+kind of data.
+
+so to iterate we have loops avialble, and hence they are 
+
+-> for loops
+-> for of loops
+-> map function
+-> reduce function
+->filter function
+-> forEach function
+-> every function
+->some function
+->while loops
+
+
+for objects we have to iterate usinng 
+-> for in loop.
+
+once we iterate using loop , then we will get the data ini array format, 
+then we can use any thing from array looping concept.
+
+explination of loops:
+
+map():
+
+map is used to iterate through array and for 
+each element in the array it will process and 
+gives the result, and there will be call back function 
+which will get the result.
+
+
+filter():
+filter is used to iterate through the array, and for each element in 
+the array it checks for the 
+condition and if the condition meets then it will 
+return those array elements as a result
+but not the complete array.
+
+reduce():
+
+reduce() is used to iterate through the array, and it contains an 
+accumulator, which is assigned as 0 initiallly
+after that if we want to get the single object or single result or 
+any type of 
+calculations, then we can use reduce().
+
+find():
+
+find() is used to find out the first occarance of the element depending
+ on the condition.
+if even more matches found, still it will return first match, and then 
+it will exit the loop.
+
+syntaxes:
+
+var array=[3,5,7,34,65,87,90,'rekha','keerthi','gopi','raghava'];
+
+all loop examples using variouos loop structures: see exampleloops.js program.
+
+for objects looping please check, objectLoopExample.js
+
+
+
